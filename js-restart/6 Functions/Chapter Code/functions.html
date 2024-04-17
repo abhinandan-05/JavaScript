@@ -9,16 +9,49 @@
       /*
       "Don't Repeat Yourself" it Encourages code reusability.
       */
-      let age = 21;
-      function printAge() {
-        console.log(`Your age is ${age}`);
-      }
-      printAge();
 
-      age = 76;
-      printAge();  
-      age = 1;
-      printAge();
+      // let age = 21;
+      // function printAge() {
+      //   console.log(`Your age is ${age}`);
+      // }
+      // printAge();
+
+      // age = 76;
+      // printAge();
+      // age = 1;
+      // printAge();
+
+      // function generateRandomMove() {
+      //   let random = Math.random();
+      //   let randomMove = random * 3;
+      //   return randomMove;
+      // }
+
+      // let randomMove = generateRandomMove();
+
+      // console.log(generateRandomMove());
+      // console.log(generateRandomMove());
+      // console.log(generateRandomMove());
+      // console.log(generateRandomMove());
+      // console.log(generateRandomMove());
+
+      function determineDriveStatus() {
+        let age = 34;
+        if (age === undefined) {
+          return "Aap Avtaar hain";
+        }
+        console.log("Checking drive status");
+
+        let status;
+        if (age > 18) {
+          status = "You can drive";
+        } else {
+          status = "Use a BiCycle";
+        }
+        return status;
+      }
+
+      console.log(determineDriveStatus());
     </script>
   </body>
 </html>
