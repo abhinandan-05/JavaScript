@@ -42,13 +42,11 @@
         }
         console.log("Checking drive status");
 
-        let status;
         if (age > 18) {
-          status = "You can drive";
+          return "You can drive";
         } else {
-          status = "Use a BiCycle";
+          return "Use a BiCycle";
         }
-        return status;
       }
 
       console.log(determineDriveStatus());
