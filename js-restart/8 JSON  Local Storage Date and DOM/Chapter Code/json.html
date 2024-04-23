@@ -5,6 +5,7 @@
   </head>
   <body>
     <script>
+      /*
       let product = {
         name: "T-shirt",
         price: 789,
@@ -21,6 +22,24 @@
       let newProduct = JSON.parse(str);
       console.log(typeof newProduct);
       console.log(newProduct);
+      */
+
+      let product = {
+        name: "T-shirt",
+        price: 789,
+        rating: {
+          stars: 4.5,
+          noOfReviews: 453,
+        },
+      };
+
+      // localStorage.setItem('Name', 'KG Coding');
+      // localStorage.setItem('Price', '999');
+
+      // console.log(localStorage.getItem('Name'));
+      // localStorage.setItem("product", JSON.stringify(product));
+      let product2 = JSON.parse(localStorage.getItem("product"));
+      console.log(product2);
     </script>
   </body>
 </html>
