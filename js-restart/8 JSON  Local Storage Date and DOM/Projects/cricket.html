@@ -45,10 +45,12 @@
         win: 0,
         lost: 0,
         tie: 0,
-        displayScore: function() {
+        
+      };
+
+      score.displayScore = displayScore: function () {
           return `No of matches Won:${score.win}, Lost:${score.lost}, Tie: ${score.tie}`;
         }
-      };
 
       function generateComputerChoice() {
         // This will generate random number between 0 and 3
@@ -100,13 +102,15 @@
         }
       }
 
-      function showResult(userMove, computerMove, result) { 
+      function showResult(userMove, computerMove, result) {
+        localStorage.setItem("Score", JSON.stringify(score));
         alert(
           `You have chosen ${userMove}. Computer choice is ${computerMove}
           
           ${result}
           
-          ${score.displayScore()}`);
+          ${score.displayScore()}`
+        );
       }
     </script>
   </body>
