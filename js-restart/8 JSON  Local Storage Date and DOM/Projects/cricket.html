@@ -47,6 +47,8 @@
     >
       Reset
     </button>
+
+    <h3 id=""></h3>
     <script>
       let scoreStr = localStorage.getItem('Score');
       resetScore(scoreStr);
@@ -58,7 +60,7 @@
           tie: 0,
         };
 
-        score.displayScore = displayScore: function() {
+        score.displayScore = displayScore; function() {
           return `No of matches Won:${score.win}, Lost:${score.lost}, Tie: ${score.tie}`;
         };
       }
