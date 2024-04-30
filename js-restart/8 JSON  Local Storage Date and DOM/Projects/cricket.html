@@ -48,23 +48,27 @@
       Reset
     </button>
 
-    <h3 id=""></h3>
+    <h3 id="user-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
     <script>
-      let scoreStr = localStorage.getItem('Score');
+      let scoreStr = localStorage.getItem("Score");
       resetScore(scoreStr);
 
       function resetScore(scoreStr) {
-        score = scoreStr ? JSON.parse(scoreStr) : {
-          win: 0,
-          lost: 0,
-          tie: 0,
-        };
+        score = scoreStr
+          ? JSON.parse(scoreStr)
+          : {
+              win: 0,
+              lost: 0,
+              tie: 0,
+            };
 
-        score.displayScore = displayScore; function() {
+        score.displayScore = function () {
           return `No of matches Won:${score.win}, Lost:${score.lost}, Tie: ${score.tie}`;
         };
       }
-
 
       function generateComputerChoice() {
         // This will generate random number between 0 and 3
@@ -118,6 +122,7 @@
 
       function showResult(userMove, computerMove, result) {
         localStorage.setItem("Score", JSON.stringify(score));
+        document.queryselector('#user-move').innertext = 
         alert(
           `You have chosen ${userMove}. Computer choice is ${computerMove}
 
