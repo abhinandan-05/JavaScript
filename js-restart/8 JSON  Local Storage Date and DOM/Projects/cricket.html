@@ -42,7 +42,7 @@
 
     <button
       onclick="localStorage.clear()
-    resetScore(scoreStr);
+      resetScore();
     "
     >
       Reset
@@ -135,7 +135,7 @@
 
         document.querySelector("#result").innerText = result || "";
 
-        document.querySelector("#").innerText = `${score.displayScore()}`;
+        document.querySelector("#score").innerText = score.displayScore();
 
         // alert(
         //   `You have chosen ${userMove}. Computer choice is ${computerMove}
