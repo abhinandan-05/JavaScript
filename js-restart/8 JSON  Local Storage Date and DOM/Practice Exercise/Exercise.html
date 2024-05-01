@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JSON, Local Storage, Date & DOM</title>
+    <style>
+      #my-button {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .js-odd {
+        background-color: chocolate;
+      }
+
+      .js-even {
+        background-color: lawngreen;
+      }
+    </style>
   </head>
   <body>
-    <script>
-      let currentHour = new Date();
-      let hour = currentHour.getHours();
-      console.log(hour);
+    <h3 id="greeting"></h3>
 
-      if (hour < 12) {
-        console.log("GoodMorning");
-      } else if (hour > 12 && hour < 18) {
-        console.log("Good Afternoon");
-      } else if (hour > 18 && hour < 5);
+    <button id="my-button" onclick="buttonPressed();"></button>
+
+    <script>
+      let noOfTimesClicked = localStorage.getItem('noOfTimesClicked') || 0;
+
+      function buttonPressed() {
+        noOfTimesClicked++;
+        localStorage.setItem('noOfTimesClicked', noOfTimesClicked);
+        updateButton();
+      }
+
+      function updateButton() {
+        let button = document.querySelector('#my-button');
+        if (noOfTimesClicked % 2 === 0) {
+          button.classList.remove("js-odd");
+          button.classList.add("js-even");
+        } else {
+          button.classList.remove("js-even");
+          button.classList.add("js-odd");
+        }
+        button.innerText = noOfTimesClicked;
+      }
+
+      updateButton();
+
+      function doGreeting(personName = "Dear") {
+        let date = new Date();
+        let hour = date.getHours();
+        // let hours = 20;
+        let heading = document.querySelector("#greeting");
+
+        if (hour >5 && hour < 12) {
+          heading.innerText = `Good Morning ${personName}`;
+        } else if (hour > 12 && hour < 18) {
+          heading.innerText = `Good Afternoon ${personName}`;
+        } else {
+          heading.innerText = `Good Night ${personName}`;
+        }
+      }
+
+      doGreeting("Abhinandan");
     </script>
   </body>
 </html>
