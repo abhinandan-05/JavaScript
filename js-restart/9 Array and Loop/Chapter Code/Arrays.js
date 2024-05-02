@@ -15,3 +15,4 @@ let ticTacToe = [
   ["", "", ""]
 ];
 // console.log(ticTacToe);
+console.log(ticTacToe[0] [2] = "X");
