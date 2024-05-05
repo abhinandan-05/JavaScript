@@ -6,8 +6,15 @@
   </head>
   <body>
     <h1 id="main-heading">Todo App</h1>
-    <input id="todo-input" type="text" placeholder="Enter Todo here" />
-    <button onclick="addTodo();">Add</button>
+
+    <div class="grid-container">
+      <input id="todo-input" type="text" placeholder="Enter Todo here" />
+      <input id="todo-date" type="date" />
+      <button class="btn-todo" onclick="addTodo();">Add</button>
+    </div> 
+
+    <div class="todo-container grid-container"></div>
+    <p id="todo-items"></p>
 
     <script src="todo.js"></script>
   </body>
