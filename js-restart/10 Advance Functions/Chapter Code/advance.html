@@ -33,6 +33,15 @@
       // let square = (num) => num * num;
 
       // console.log(square(5));
+
+      let alarm = () => console.log(`Subaha ho gayi, uth jaao. ${new Date()}`);
+
+      // let timerId = setTimeout(alarm, 5000);
+      // console.log(`Alaram set with timerID: ${timerId}`);
+      // clearTimeout(timerId);
+
+      let interval = setInterval(alarm, 1000);
+      setTimeout(() => clearInterval(interval), 5000);
     </script>
   </body>
 </html>
