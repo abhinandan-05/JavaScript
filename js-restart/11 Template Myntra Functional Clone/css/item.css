@@ -4,7 +4,7 @@
 }
 
 .item-container {
-  width: 200px;
+  width: 250px;
 }
 
 .item-image {
@@ -42,16 +42,40 @@
 }
 
 .price {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 15px;
+  color: #282c3f;
+  white-space: nowrap;
 }
 
 .current-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #282c3f;
 }
 
 .original-price {
+  text-decoration: line-through;
+  color: #7e818c;
+  font-weight: 400;
+  margin-left: 5px;
+  font-size: 12px;
 }
 
 .discount {
+  color: #ff905a;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 5px;
 }
 
 .btn-add-bag {
+  margin-top: 8px;
+  font-size: 18px;
+  width: 100%;
+  background-color: lightgreen;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px ;
 }
