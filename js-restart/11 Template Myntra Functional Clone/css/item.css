@@ -5,6 +5,7 @@
 
 .item-container {
   width: 250px;
+  margin: 10px;
 }
 
 .item-image {
@@ -77,5 +78,6 @@
   background-color: lightgreen;
   border: none;
   padding: 8px 15px;
-  border-radius: 10px ;
+  border-radius: 10px;
+  cursor: pointer;
 }
