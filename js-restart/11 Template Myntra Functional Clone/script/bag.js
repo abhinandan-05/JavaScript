@@ -2,6 +2,7 @@ let bagItemObjects;
 onLoad();
 
 function onLoad() {
+  let 
   loadBagItemObjects();
   displayBagItems();
 }
