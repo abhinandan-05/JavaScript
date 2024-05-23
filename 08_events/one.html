@@ -65,7 +65,7 @@
     // jQuery - on
 
     // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget, 
+    // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
@@ -88,20 +88,15 @@
 
     */
 
-    document.querySelector('#images').addEventListener('click', (e) => {
+    document.querySelector("#images").addEventListener("click", (e) => {
       console.log(e.target.tagname);
-      if (e.target.tagname === 'IMG') {
+      if (e.target.tagname === "IMG") {
         console.log(e.target.id);
-        let removeIt = e.target.parentNode
+        let removeIt = e.target.parentNode;
         removeIt.remove();
       }
+    });
 
-
-      
-    })
-
-      // removeIt.parentNode.removeChild(removeIt)
-
-
+    // removeIt.parentNode.removeChild(removeIt)
   </script>
 </html>
