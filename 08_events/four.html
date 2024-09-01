@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetInterval, clearInterval</title>
+  </head>
+  <body>
+    <h1>HW</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+      const sayMyname = function (str) {
+        console.log(str);
+      };
+
+      ;
+
+      document.querySelector("#start").addEventListener("click", setInterval(sayMyname, 2000, "Abhi"));
+      clearInterval(sayMyname);
+    </script>
+  </body>
+</html>
