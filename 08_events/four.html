@@ -10,14 +10,7 @@
     <button id="start">Start</button>
     <button id="stop">Stop</button>
     <script>
-      const sayMyname = function (str) {
-        console.log(str);
-      };
-
-      ;
-
-      document.querySelector("#start").addEventListener("click", setInterval(sayMyname, 2000, "Abhi"));
-      clearInterval(sayMyname);
+      setInterval(console.log("Abhi"), 2000);
     </script>
   </body>
 </html>
